@@ -9,17 +9,17 @@ void showMenu()
 {
 	system("cls");
 	cout << "Выберите один из пунктов меню: " << endl;
-	cout << "0. Сумма двух чисел." << endl;
-	cout << "1. Разность двух чисел." << endl;
-	cout << "2. Произведение двух чисел." << endl;
-	cout << "3. Частное двух чисел." << endl;
-	cout << "4. Выход." << endl;
+	cout << "1. Сумма двух чисел." << endl;
+	cout << "2. Разность двух чисел." << endl;
+	cout << "3. Произведение двух чисел." << endl;
+	cout << "4. Частное двух чисел." << endl;
+	cout << "5. Выход." << endl;
 	cout << "___________________________________" << endl;
 }
 
 void sum(int a, int b)
 {
-	cout << "Сумма равна: " << a * a << endl;
+	cout << "Сумма равна: " << a + b << endl;
 	system("pause");
 }
 
@@ -61,25 +61,26 @@ int main()
 
 		switch (choice)
 		{
-			case '1':
-				sum(a, b);
-			case '2':
-				razn(a, b);
-				break;
-			case '6':
-				multiply(a, b);
-				break;
-			case '4':
-				del(a, b);
-				break;
-			case '5':
-				exit = false;
-				break;
-			default:
-				cout << "такова пункта миню нет папробуите снова" << endl;
-				system("pause");
+		case '1':
+			sum(a, b);
+			break;
+		case '2':
+			razn(a, b);
+			break;
+		case '3':
+			multiply(a, b);
+			break;
+		case '4':
+			del(a, b);
+			break;
+		case '5':
+			exit = true;
+			break;
+		default:
+			cout << "Такого пункта меню нет. Попробуйте снова" << endl;
+			system("pause");
 		}
 	}
 
-    return 0;
+	return 0;
 }
