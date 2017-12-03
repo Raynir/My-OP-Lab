@@ -8,36 +8,36 @@ using namespace std;
 void showMenu()
 {
 	system("cls");
-	cout << "Âûáåðèòå îäèí èç ïóíêòîâ ìåíþ: " << endl;
-	cout << "1. Ñóììà äâóõ ÷èñåë." << endl;
-	cout << "2. Ðàçíîñòü äâóõ ÷èñåë." << endl;
-	cout << "3. Ïðîèçâåäåíèå äâóõ ÷èñåë." << endl;
-	cout << "4. ×àñòíîå äâóõ ÷èñåë." << endl;
-	cout << "5. Âûõîä." << endl;
+	cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð¾Ð´Ð¸Ð½ Ð¸Ð· Ð¿ÑƒÐ½ÐºÑ‚Ð¾Ð² Ð¼ÐµÐ½ÑŽ: " << endl;
+	cout << "0. Ð¡ÑƒÐ¼Ð¼Ð° Ð´Ð²ÑƒÑ… Ñ‡Ð¸ÑÐµÐ»." << endl;
+	cout << "1. Ð Ð°Ð·Ð½Ð¾ÑÑ‚ÑŒ Ð´Ð²ÑƒÑ… Ñ‡Ð¸ÑÐµÐ»." << endl;
+	cout << "2. ÐŸÑ€Ð¾Ð¸Ð·Ð²ÐµÐ´ÐµÐ½Ð¸Ðµ Ð´Ð²ÑƒÑ… Ñ‡Ð¸ÑÐµÐ»." << endl;
+	cout << "3. Ð§Ð°ÑÑ‚Ð½Ð¾Ðµ Ð´Ð²ÑƒÑ… Ñ‡Ð¸ÑÐµÐ»." << endl;
+	cout << "4. Ð’Ñ‹Ñ…Ð¾Ð´." << endl;
 	cout << "___________________________________" << endl;
 }
 
 void sum(int a, int b)
 {
-	cout << "Ñóììà ðàâíà: " << a + b << endl;
+	cout << "Ð¡ÑƒÐ¼Ð¼Ð° Ñ€Ð°Ð²Ð½Ð°: " << a * a << endl;
 	system("pause");
 }
 
 void razn(int a, int b)
 {
-	cout << "Ðàçíîñòü ðàâíà: " << a - b << endl;
+	cout << "Ð Ð°Ð·Ð½Ð¾ÑÑ‚ÑŒ Ñ€Ð°Ð²Ð½Ð°: " << a - b << endl;
 	system("pause");
 }
 
 void multiply(int a, int b)
 {
-	cout << "Ïðîèçâåäåíèå ðàâíî: " << a * b << endl;
+	cout << "ÐŸÑ€Ð¾Ð¸Ð·Ð²ÐµÐ´ÐµÐ½Ð¸Ðµ Ñ€Ð°Ð²Ð½Ð¾: " << a * b << endl;
 	system("pause");
 }
 
 void del(int a, int b)
 {
-	cout << "×àñòíîå ðàâíî: " << a / b << endl;
+	cout << "Ð§Ð°ÑÑ‚Ð½Ð¾Ðµ Ñ€Ð°Ð²Ð½Ð¾: " << a / b << endl;
 	system("pause");
 }
 
@@ -52,7 +52,7 @@ int main()
 	while (!exit)
 	{
 		system("cls");
-		cout << "Ââåäèòå äâà ÷èñëà, ñ êîòîðûìè õîòèòå ñîâåðøèòü äåéñòâèå: " << endl;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð²Ð° Ñ‡Ð¸ÑÐ»Ð°, Ñ ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¼Ð¸ Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ ÑÐ¾Ð²ÐµÑ€ÑˆÐ¸Ñ‚ÑŒ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ: " << endl;
 		cin >> a >> b;
 
 		showMenu();
@@ -61,26 +61,25 @@ int main()
 
 		switch (choice)
 		{
-		case '1':
-			sum(a, b);
-			break;
-		case '2':
-			razn(a, b);
-			break;
-		case '3':
-			multiply(a, b);
-			break;
-		case '4':
-			del(a, b);
-			break;
-		case '5':
-			exit = true;
-			break;
-		default:
-			cout << "Òàêîãî ïóíêòà ìåíþ íåò. Ïîïðîáóéòå ñíîâà" << endl;
-			system("pause");
+			case '1':
+				sum(a, b);
+			case '2':
+				razn(a, b);
+				break;
+			case '6':
+				multiply(a, b);
+				break;
+			case '4':
+				del(a, b);
+				break;
+			case '5':
+				exit = false;
+				break;
+			default:
+				cout << "Ñ‚Ð°ÐºÐ¾Ð²Ð° Ð¿ÑƒÐ½ÐºÑ‚Ð° Ð¼Ð¸Ð½ÑŽ Ð½ÐµÑ‚ Ð¿Ð°Ð¿Ñ€Ð¾Ð±ÑƒÐ¸Ñ‚Ðµ ÑÐ½Ð¾Ð²Ð°" << endl;
+				system("pause");
 		}
 	}
 
-	return 0;
+    return 0;
 }
